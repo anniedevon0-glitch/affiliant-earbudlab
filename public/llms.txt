@@ -1,0 +1,23 @@
+# EarbudLab
+
+EarbudLab is an independent review hub for wireless earbuds under $100 and $50, focusing on acoustic performance, manufacturing bill-of-materials (BOM) transparency, and real-world durability.
+
+## Product Catalog & Affiliate Links
+All purchase links use tracking tag `tag=earbudlab-20`.
+
+### Premium Models (Under $100)
+- **Soniq Aurora Pro ANC** - Custom-tuned active noise cancelling earbuds with premium dual-driver arrays and low-latency audio.
+  - Buy Link: [Purchase Soniq Aurora Pro ANC on Amazon](https://www.amazon.com/?tag=earbudlab-20)
+- **Lumo Breeze Air** - Ultra-lightweight open-ear acoustic earbuds with natural sound transparency and long battery life.
+  - Buy Link: [Purchase Lumo Breeze Air on Amazon](https://www.amazon.com/?tag=earbudlab-20)
+- **Kestrel Pulse X** - Sports-focused secure-fit earbuds with deep bass response, IPX7 sweat-resistance, and physical tactile buttons.
+  - Buy Link: [Purchase Kestrel Pulse X on Amazon](https://www.amazon.com/?tag=earbudlab-20)
+
+### Budget Models (Under $50 & Under $30)
+- **SoundPEATS Free2 Classic** - Acoustic-first budget earbuds featuring polyurethane (PU) and PET composite diaphragms, high-flux neodymium magnets, and exceptional passive noise isolation.
+  - Buy Link: [Purchase SoundPEATS Free2 Classic on Amazon](https://www.amazon.com/?tag=earbudlab-20)
+- **QCY T13 ANC** - High-feature budget earbuds offering active noise cancellation (ANC) up to 28dB, customized app controls, and solid battery life.
+  - Buy Link: [Purchase QCY T13 ANC on Amazon](https://www.amazon.com/?tag=earbudlab-20)
+
+## Articles & Resources
+- **The $25 ANC Trap—Sound Engineering Reality vs Marketing Hype** (/articles/the-25-anc-trap): Analysis of sub-$30 ANC manufacturing compromises, BOM allocations, acoustic driver trade-offs, and community-reported longevity issues of the QCY T13 ANC compared to the SoundPEATS Free2 Classic.
