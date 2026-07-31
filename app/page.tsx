@@ -8,6 +8,7 @@ import { CommissionCalculator } from '@/components/commission-calculator'
 import { BuyingGuide } from '@/components/buying-guide'
 import { FaqSection } from '@/components/faq-section'
 import { ReviewerBio } from '@/components/reviewer-bio'
+import { EarbudMatcher } from '@/components/earbud-matcher'
 
 export default function Page() {
   return (
@@ -50,8 +51,13 @@ export default function Page() {
           </a>
         </div>
 
+        {/* Interactive personalized product matcher */}
+        <div className="mt-12">
+          <EarbudMatcher />
+        </div>
+
         {/* Comparison matrix directly under the hero CTA */}
-        <div className="mt-10">
+        <div className="mt-16">
           <ComparisonTable />
         </div>
       </section>
@@ -82,7 +88,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Affiliate Business Simulation Hub — isolated from the consumer buying journey */}
+      {/* Affiliate Business Simulation Hub â isolated from the consumer buying journey */}
       <section className="border-t border-border/70">
         <div className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
           <div className="mb-8 flex flex-col items-center text-center">
