@@ -7,8 +7,13 @@ import {
   CheckCircle, 
   ShoppingCart, 
   Info, 
-  ShieldAlert
+  ShieldAlert,
+  ThumbsUp,
+  ThumbsDown,
+  HelpCircle
 } from 'lucide-react';
+
+const SITE_URL = 'https://affiliant-eta.vercel.app';
 
 interface ArticleData {
   slug: string;
@@ -18,7 +23,11 @@ interface ArticleData {
   author: string;
   authorRole: string;
   date: string;
+  datePublished: string;
   tldr: string;
+  whoShouldBuy: string[];
+  whoShouldSkip: string[];
+  faqs: { question: string; answer: string }[];
   sections: {
     heading: string;
     content: string[];
@@ -52,6 +61,31 @@ const articlesMap: Record<string, ArticleData> = {
     authorRole: 'Acoustics & Sound Engineering Specialist',
     date: 'August 15, 2026',
     tldr: 'Standard IPX ratings test pure, static room-temperature water. They do not simulate corrosive salt sweat, soap surfactants, or high-velocity steam. An IPX7 rating can still suffer driver corrosion and charging contact oxidation within 6 months if acoustic vents lack hydrophobic ePTFE membranes and contacts are not wiped dry.',
+    datePublished: '2026-08-15',
+    whoShouldBuy: [
+          "Gym and outdoor runners who sweat heavily and need real durability beyond marketing IP badges",
+          "Buyers comparing IPX4 vs IPX5 vs IPX7 for workouts, rain, and daily carry",
+          "Anyone whose buds failed after months of sweat or residual moisture in the case"
+    ],
+    whoShouldSkip: [
+          "People shopping only for max ANC or hi-fi codecs—this guide is about liquid durability",
+          "Users who need formal waterproof swim buds; consumer TWS is not for pool immersion",
+          "Anyone expecting IP labels alone to guarantee long-term driver and contact health"
+    ],
+    faqs: [
+          {
+                "question": "Is IPX7 always better than IPX4 for gym earbuds?",
+                "answer": "IPX7 is better for heavy sweat and hard rain, but lab immersion in pure water is not the same as salt sweat, surfactants, or steam. Dry charging contacts and hydrophobic mesh matter as much as the rating number."
+          },
+          {
+                "question": "Can I wear IPX7 earbuds in the shower?",
+                "answer": "No. Steam, heat, and soap lower surface tension and can push moisture past seals that pass calm freshwater IP tests. Skip hot showers, steam rooms, and saunas regardless of IPX rating."
+          },
+          {
+                "question": "Why do waterproof earbuds still die after a few months?",
+                "answer": "Salt crystals and residual moisture often corrode charging contacts or clog acoustic mesh even when the driver survives. Wipe contacts dry before docking and prefer nano-coated boards plus ePTFE mesh over bare IP marketing."
+          }
+    ],
     sections: [
       {
         heading: '1. What IPX Ratings Actually Mean (And What Lab Tests Hide)',
@@ -129,6 +163,31 @@ const articlesMap: Record<string, ArticleData> = {
     authorRole: 'Acoustics & Sound Engineering Specialist',
     date: 'August 18, 2026',
     tldr: 'Marketing routinely hypes 13mm or 14.2mm drivers as superior bass machines. In reality, large budget diaphragms suffer from excessive moving mass, cone breakup, and sluggish transient response. A precision-tuned 8mm to 10mm composite driver with balanced front/rear acoustic chamber dampening delivers faster, deeper, and less muddy bass.',
+    datePublished: '2026-08-18',
+    whoShouldBuy: [
+          "Shoppers tempted by 13mm or 14.2mm driver marketing claims",
+          "Listeners who want tighter bass without upper-bass bloat",
+          "Buyers comparing budget composite drivers and acoustic chamber design"
+    ],
+    whoShouldSkip: [
+          "People who only need a quick brand-name shopping list with no physics context",
+          "Buyers already decided on open-fit buds where canal seal—not driver size—dominates bass",
+          "Anyone expecting driver diameter alone to predict sound quality"
+    ],
+    faqs: [
+          {
+                "question": "Do bigger earbud drivers mean better bass?",
+                "answer": "Not in a sealed ear canal. Controlled diaphragm mass, material stiffness, chamber damping, and fit matter more than a large heavy PET driver that flexes and muddies 200–400 Hz."
+          },
+          {
+                "question": "What driver size is usually best under $50?",
+                "answer": "Well-tuned 8mm–10mm composite drivers often beat oversized budget diaphragms on speed and cleanliness. Judge frequency balance and seal, not millimeters alone."
+          },
+          {
+                "question": "Why do my large-driver buds sound muddy?",
+                "answer": "Heavy diaphragms start and stop slowly, raising distortion and masking mids. Poor rear-chamber venting and a weak tip seal make the bloat worse."
+          }
+    ],
     sections: [
       {
         heading: '1. The Big Driver Myth: Physics of In-Ear Transducers',
@@ -185,6 +244,31 @@ const articlesMap: Record<string, ArticleData> = {
     authorRole: 'Acoustics & Sound Engineering Specialist',
     date: 'August 12, 2026',
     tldr: 'True Wireless earbuds use tiny 35mAh to 55mAh lithium-ion cells. Because earbuds are stored in charging cases at 100% state-of-charge (4.2V to 4.35V) continuously at warm ambient temperatures, high voltage stress and calendar aging cause 30% to 50% capacity loss within 18 months.',
+    datePublished: '2026-08-12',
+    whoShouldBuy: [
+          "Owners whose TWS runtime collapsed within 12–18 months",
+          "Buyers who want habits that slow micro Li-ion calendar aging",
+          "Anyone storing buds in hot cars, on sunlit desks, or on fast-charge pads"
+    ],
+    whoShouldSkip: [
+          "Shoppers only comparing day-one battery marketing hours",
+          "Users unwilling to change heat and float-charge habits",
+          "People seeking a repair guide for already-swollen cells"
+    ],
+    faqs: [
+          {
+                "question": "Why do wireless earbuds die so fast compared with phones?",
+                "answer": "Tiny 35–55 mAh cells live in cases at or near 100% charge for long periods. High voltage plus heat accelerates calendar aging, so capacity can drop 30–50% within about 18 months."
+          },
+          {
+                "question": "Should I use a fast charger for the charging case?",
+                "answer": "Prefer a standard 5V/1A USB supply. Extra heat from high-wattage bricks speeds electrolyte breakdown in small cells even if the case accepts the input."
+          },
+          {
+                "question": "How can I extend earbud battery lifespan?",
+                "answer": "Keep the case cool, avoid sun and hot dashboards, and recharge before deep discharge when practical. Cool storage at moderate state-of-charge beats constant full-float heat."
+          }
+    ],
     sections: [
       {
         heading: '1. The Chemistry of Micro Lithium-Ion Cells in TWS Earbuds',
@@ -219,6 +303,31 @@ const articlesMap: Record<string, ArticleData> = {
     authorRole: 'Acoustics & Sound Engineering Specialist',
     date: 'August 10, 2026',
     tldr: 'Standard Bluetooth audio introduces 150ms to 250ms of audio delay due to operating system audio buffers and packet re-transmission queues. Dedicated Low Latency Gaming Modes (40ms to 60ms) reduce the buffer depth and prioritize real-time packet delivery for synchronized gameplay.',
+    datePublished: '2026-08-10',
+    whoShouldBuy: [
+          "Mobile gamers who notice gunshot or footstep lag on Bluetooth buds",
+          "Android or iOS users choosing between AAC, aptX/LC3, and Game Mode",
+          "Buyers who need under-60 ms class delay for competitive play"
+    ],
+    whoShouldSkip: [
+          "Movie and podcast listeners—OS A/V compensation already hides most delay",
+          "Buyers who refuse a dedicated low-latency or Game Mode toggle",
+          "Anyone expecting standard SBC/AAC stacks to match wired esports latency"
+    ],
+    faqs: [
+          {
+                "question": "What causes Bluetooth gaming lag?",
+                "answer": "Delay stacks from encode time, RF packet buffers, the phone OS audio path, and the bud decoder. Standard SBC/AAC prioritize robustness and can land around 150–250 ms total."
+          },
+          {
+                "question": "Is Game Mode better than aptX for mobile FPS?",
+                "answer": "A hardware Game Mode that shrinks buffers and prioritizes real-time packets often matters more than the codec logo alone. Target roughly 40–60 ms for imperceptible A/V sync in mobile shooters."
+          },
+          {
+                "question": "Which codec should iPhone vs Android users prefer?",
+                "answer": "AAC is the practical path on iOS. On Android, aptX or LC3 can help when both ends support them, but a true low-latency mode still beats codec marketing for competitive play."
+          }
+    ],
     sections: [
       {
         heading: '1. Where Bluetooth Latency Actually Comes From',
@@ -253,6 +362,31 @@ const articlesMap: Record<string, ArticleData> = {
     authorRole: 'Acoustics & Sound Engineering Specialist',
     date: 'August 08, 2026',
     tldr: 'An acoustic air leak of just 1mm causes sub-bass cancellation below 100Hz, stripping away up to 15dB to 20dB of perceived low-end weight. Furthermore, feedback ANC microphones depend on a sealed ear canal to calculate anti-noise phase. Testing ear-tip sizing is the single most important audio upgrade you can make.',
+    datePublished: '2026-08-08',
+    whoShouldBuy: [
+          "Anyone whose buds sound thin, harsh, or bass-light out of the box",
+          "ANC buyers whose cancellation collapses with the wrong tips",
+          "Workout users who need tips that stay sealed during movement"
+    ],
+    whoShouldSkip: [
+          "Open-ear / open-fit shoppers who intentionally want awareness over isolation",
+          "People seeking EQ presets instead of physical seal fundamentals",
+          "Buyers who will not test S/M/L or foam tips before judging sound"
+    ],
+    faqs: [
+          {
+                "question": "Why does ear tip size change bass so much?",
+                "answer": "In-ears need a closed canal chamber. A small air leak vents low-frequency pressure and can erase 15–20 dB of sub-bass, so expensive drivers still sound thin with the wrong tip."
+          },
+          {
+                "question": "How do I know if I have a good acoustic seal?",
+                "answer": "Do the hum test: hum softly with lips closed. A loud, resonant occlusion effect means a tight seal; a quiet distant hum usually means the tip is too small or sitting wrong."
+          },
+          {
+                "question": "Why does bad fit break ANC?",
+                "answer": "Feedback ANC needs a predictable sealed cavity to build anti-noise. Leaks change the transfer function, so cancellation weakens even if the mics and DSP are competent."
+          }
+    ],
     sections: [
       {
         heading: '1. The Physics of Acoustic Coupling in the Ear Canal',
@@ -286,6 +420,31 @@ const articlesMap: Record<string, ArticleData> = {
     authorRole: 'Acoustics & Sound Engineering Specialist',
     date: 'July 30, 2026',
     tldr: 'Building true active noise cancellation costs minimum $12 to $18 in hardware BOM alone (dual microphones, low-noise pre-amps, dedicated DSP). Sub-$30 earbuds cut corners with single-mic feedforward circuits that generate acoustic hissing, distort bass, and drain micro-batteries without blocking meaningful low-frequency noise.',
+    datePublished: '2026-07-30',
+    whoShouldBuy: [
+          "Shoppers eyeing sub-$30 Active Noise Cancelling claims",
+          "Buyers who want BOM-level honesty before paying for ANC badges",
+          "Anyone comparing passive isolation vs weak single-mic feedforward ANC"
+    ],
+    whoShouldSkip: [
+          "Users who need proven hybrid ANC for planes and trains and can spend about $40+",
+          "Buyers only shopping non-ANC sound quality without ANC marketing pressure",
+          "Anyone expecting $25 retail to fund dual-mic hybrid hardware after margins"
+    ],
+    faqs: [
+          {
+                "question": "Can $25 earbuds have real hybrid ANC?",
+                "answer": "Genuine hybrid ANC hardware alone often costs roughly $12–$18 BOM before margins. At $25 retail, many designs use weak single-mic feedforward that hisses, muddies bass, and drains tiny batteries."
+          },
+          {
+                "question": "Is passive isolation better under $30?",
+                "answer": "Often yes. A deep seal can deliver strong broadband attenuation without electronic hiss. Prioritize fit and tuning first; treat hybrid ANC as a $40+ feature when dual-mic designs are credible."
+          },
+          {
+                "question": "What should I look for if I still want ANC on a budget?",
+                "answer": "Prefer clearer dual-mic hybrid claims, honest limitations, and strong passive seal over max dB marketing. If the price cannot support the silicon and mics, skip ANC and buy better acoustics."
+          }
+    ],
     sections: [
       {
         heading: '1. How Much Does it Actually Cost to Build ANC Earbuds? (BOM Breakdown)',
@@ -328,16 +487,28 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
+  const canonical = `${SITE_URL}/articles/${article.slug}`;
+
   return {
     title: `${article.title} — EarbudLab`,
-    description: article.subtitle,
+    description: article.tldr.slice(0, 160),
+    alternates: {
+      canonical,
+    },
     openGraph: {
       title: `${article.title} — EarbudLab`,
       description: article.subtitle,
       type: 'article',
-      publishedTime: article.date,
-      authors: [article.author]
-    }
+      url: canonical,
+      siteName: 'EarbudLab',
+      publishedTime: article.datePublished,
+      authors: [article.author],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${article.title} — EarbudLab`,
+      description: article.subtitle,
+    },
   };
 }
 
@@ -349,8 +520,63 @@ export default async function DynamicArticlePage({ params }: { params: Promise<{
     notFound();
   }
 
+  const canonical = `${SITE_URL}/articles/${article.slug}`;
+
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.subtitle,
+    datePublished: article.datePublished,
+    dateModified: article.datePublished,
+    author: {
+      '@type': 'Person',
+      name: article.author,
+      jobTitle: article.authorRole,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'EarbudLab',
+      url: SITE_URL,
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': canonical,
+    },
+    articleSection: article.category,
+    inLanguage: 'en-US',
+    isAccessibleForFree: true,
+  };
+
+  const faqJsonLd =
+    article.faqs.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: article.faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.answer,
+            },
+          })),
+        }
+      : null;
+
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
+
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
@@ -403,6 +629,38 @@ export default async function DynamicArticlePage({ params }: { params: Promise<{
           <p className="text-md leading-relaxed text-foreground">
             {article.tldr}
           </p>
+        </div>
+
+        {/* Who should buy / skip */}
+        <div className="mb-10 grid gap-4 md:grid-cols-2">
+          <div className="rounded-2xl border border-emerald-500/25 bg-emerald-500/5 p-5">
+            <div className="mb-3 flex items-center gap-2 text-emerald-700 dark:text-emerald-400">
+              <ThumbsUp className="h-4 w-4" />
+              <h2 className="text-sm font-bold uppercase tracking-wide">Who should buy / care</h2>
+            </div>
+            <ul className="space-y-2">
+              {article.whoShouldBuy.map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-foreground">
+                  <CheckCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-600" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-rose-500/25 bg-rose-500/5 p-5">
+            <div className="mb-3 flex items-center gap-2 text-rose-700 dark:text-rose-400">
+              <ThumbsDown className="h-4 w-4" />
+              <h2 className="text-sm font-bold uppercase tracking-wide">Who should skip</h2>
+            </div>
+            <ul className="space-y-2">
+              {article.whoShouldSkip.map((item, i) => (
+                <li key={i} className="flex items-start gap-2 text-sm text-foreground">
+                  <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-rose-500" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Content Sections */}
@@ -484,6 +742,26 @@ export default async function DynamicArticlePage({ params }: { params: Promise<{
             </div>
           )}
         </div>
+
+        {/* FAQ - visible content paired with FAQPage JSON-LD */}
+        {article.faqs.length > 0 && (
+          <section className="mt-14 rounded-2xl border border-border/60 bg-muted/20 p-6 md:p-8" aria-labelledby="faq-heading">
+            <div className="mb-5 flex items-center gap-2">
+              <HelpCircle className="h-5 w-5 text-primary" />
+              <h2 id="faq-heading" className="text-2xl font-bold tracking-tight text-foreground">
+                Frequently Asked Questions
+              </h2>
+            </div>
+            <div className="space-y-5">
+              {article.faqs.map((faq, fIdx) => (
+                <div key={fIdx} className="rounded-xl border border-border/50 bg-background p-4">
+                  <h3 className="mb-2 text-base font-semibold text-foreground">{faq.question}</h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Read More Articles / Backlinks */}
         <div className="mt-14 pt-8 border-t border-border/60">
