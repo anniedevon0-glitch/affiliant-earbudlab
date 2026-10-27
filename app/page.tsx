@@ -177,7 +177,7 @@ export default function Page() {
       </div>
         <footer className="mx-auto max-w-6xl px-4 pb-8 text-center text-sm text-muted-foreground md:px-6">
         <p>© 2026 EarbudLab — Run by Syed Moizam Ali Shah, Freelancer.</p>
-        <p>Contact: <a href="mailto:kazmisyedmoizamalishah@gmail.com">kazmisyedmoizamalishah@gmail.com</a></p>p>
+        <p>Contact: <a href="mailto:kazmisyedmoizamalishah@gmail.com">kazmisyedmoizamalishah@gmail.com</a></p>
         </footer>
     </main>
   )
