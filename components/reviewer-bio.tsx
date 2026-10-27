@@ -16,7 +16,7 @@ export function ReviewerBio() {
           <div className="flex justify-center md:justify-start">
             <div className="relative">
               <div className="flex h-24 w-24 items-center justify-center rounded-2xl bg-primary text-3xl font-extrabold text-primary-foreground shadow-md">
-                Dev
+                S
               </div>
               <span className="absolute -bottom-2 -right-2 flex h-8 w-8 items-center justify-center rounded-full border-2 border-card bg-accent text-accent-foreground shadow-sm">
                 <BadgeCheck className="h-5 w-5" />
@@ -32,16 +32,16 @@ export function ReviewerBio() {
                 Meet the Reviewer
               </span>
               <h2 id="reviewer-heading" className="mt-2 text-xl font-bold tracking-tight md:text-2xl">
-                Dev — Senior Sound Engineer &amp; Tech Reviewer
+                Syed Moizam Ali Shah — Senior Sound Engineer &amp; Tech Reviewer
               </h2>
               <p className="text-sm font-medium text-primary">8+ years of professional audio tuning experience</p>
             </div>
 
             <p className="mt-4 text-pretty text-sm leading-relaxed text-muted-foreground">
               Every earbud on EarbudLab is <strong className="text-foreground">personally and rigorously tested</strong>{' '}
-              under real-world conditions — never spec sheets alone. Dev measures each pair across daily commutes, busy
+              under real-world conditions — never spec sheets alone. Syed measures each pair across daily commutes, busy
               offices, and intense workouts to verify its true sound curve and active noise cancellation (ANC)
-              performance before it earns a recommendation.
+              performance before it earns a recommendation. Syed is the freelancer behind EarbudLab — he runs this site end to end, from product research and testing to publishing.
             </p>
 
             <div className="mt-5 flex flex-wrap gap-2">
