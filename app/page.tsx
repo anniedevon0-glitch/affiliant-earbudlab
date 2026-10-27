@@ -72,7 +72,7 @@ export default function Page() {
               <p className="text-[11px] text-muted-foreground">Expert earbud reviews</p>
             </div>
           </div>
-          <div className="flex items-center gap-4"><Link href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground">About</Link>Link><ThemeToggle</div> /></div>div>
+          <div className="flex items-center gap-4"><Link href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground">About</Link><ThemeToggle /></div>
         </div>
       </header>
 
