@@ -72,7 +72,7 @@ export default function Page() {
               <p className="text-[11px] text-muted-foreground">Expert earbud reviews</p>
             </div>
           </div>
-          <ThemeToggle />
+          <div className="flex items-center gap-4"><Link href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground">About</Link>Link><ThemeToggle</div> /></div>div>
         </div>
       </header>
 
@@ -171,9 +171,14 @@ export default function Page() {
         <AboutSection /></div>
       
       {/* Commission Calculator */}
+
       <div className="mx-auto max-w-6xl px-4 py-8 md:px-6">
         <CommissionCalculator />
       </div>
+        <footer className="mx-auto max-w-6xl px-4 pb-8 text-center text-sm text-muted-foreground md:px-6">
+        <p>© 2026 EarbudLab — Run by Syed Moizam Ali Shah, Freelancer.</p>
+        <p>Contact: <a href="mailto:kazmisyedmoizamalishah@gmail.com">kazmisyedmoizamalishah@gmail.com</a></p>p>
+        </footer>
     </main>
   )
 }
