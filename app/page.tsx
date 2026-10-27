@@ -9,6 +9,7 @@ import { CommissionCalculator } from '@/components/commission-calculator'
 import { BuyingGuide } from '@/components/buying-guide'
 import { FaqSection } from '@/components/faq-section'
 import { ReviewerBio } from '@/components/reviewer-bio'
+import { AboutSection } from '@/components/about-section'
 import { EarbudMatcher } from '@/components/earbud-matcher'
 
 const engineeringArticles = [
@@ -166,7 +167,9 @@ export default function Page() {
       <div className="mx-auto max-w-6xl px-4 py-8 md:px-6">
         <ReviewerBio />
       </div>
-
+        <div className="mx-auto max-w-6xl px-4 py-8 md:px-6">
+        <AboutSection /></div>
+      
       {/* Commission Calculator */}
       <div className="mx-auto max-w-6xl px-4 py-8 md:px-6">
         <CommissionCalculator />
