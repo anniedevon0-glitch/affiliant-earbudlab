@@ -40,7 +40,7 @@ export function AboutSection() {
           </ul>
 
           <p className="mt-5 text-sm font-medium text-foreground">
-            Available for freelance projects — feel free to get in touch for work.
+           Available for freelance projects — contact: <a href="mailto:kazmisyedmoizamalishah@gmail.com">kazmisyedmoizamalishah@gmail.com</a>
           </p>
         </div>
       </div>
